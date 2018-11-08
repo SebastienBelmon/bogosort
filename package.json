@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "react": "next",
+    "react-dom": "next",
+    "react-scripts": "2.1.1",
+    "react-spring": "^6.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "format": "prettier --write \"src/**/*.js\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
