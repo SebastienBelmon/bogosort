@@ -1,7 +1,6 @@
 import React from 'react';
 
-const initialList = [3, 2, 1, 4, 6, 5, 7];
-const period = 0;
+const initialList = [3, 2, 1, 4, 5, 6, 7];
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +11,7 @@ class App extends React.Component {
       sortedList: [...initialList],
       isSorted: false,
       sortIntervalId: 0,
+      range: 100,
     };
   }
 
@@ -64,8 +64,12 @@ class App extends React.Component {
     clearTimeout(this.state.sortIntervalId);
   };
 
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   render() {
-    const { counter, isSorted, sortedList } = this.state;
+    const { counter, isSorted, sortedList, range } = this.state;
 
     return (
       <div style={{ maxWidth: 850, marginRight: 'auto', marginLeft: 'auto' }}>
@@ -89,7 +93,21 @@ class App extends React.Component {
           </button>
         )}
         <h2>Automatic iteration</h2>
-        <button onClick={() => this.startSort(period)}>
+        <div>
+          <label htmlFor="range">Iteration speed: {range}ms</label>
+          <br />
+          <input
+            id="range"
+            name="range"
+            onChange={e => this.handleChange(e)}
+            value={range}
+            min={0}
+            max={500}
+            step={10}
+            type="range"
+          />
+        </div>
+        <button onClick={() => this.startSort(range)}>
           Start automatic sorting
         </button>
 
