@@ -122,7 +122,7 @@ class App extends React.Component {
         <p>Because you can theoretically sort your list into a single iteration!</p>
 
         <h2>Why you should NOT consider using Bogosort</h2>
-        <p>The average expected number of swaps equals (n-a)n!</p>
+        <p>The average expected number of swaps equals (n-1)n!</p>
       </div>
     );
   }
