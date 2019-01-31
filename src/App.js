@@ -119,7 +119,7 @@ class App extends React.Component {
         <div>isSorted: {JSON.stringify(isSorted)}</div>
 
         <h2>Why you should consider using Bogosort</h2>
-        <p>Because you can theoretically sort your list into a signle iteration!</p>
+        <p>Because you can theoretically sort your list into a single iteration!</p>
 
         <h2>Why you should NOT consider using Bogosort</h2>
         <p>The average expected number of swaps equals (n-a)n!</p>
