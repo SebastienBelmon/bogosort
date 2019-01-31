@@ -1,6 +1,6 @@
 import React from 'react';
 
-const initialList = [3, 2, 1, 4, 5, 6, 7];
+const initialList = [3, 2, 1, 4, 5, 6];
 
 class App extends React.Component {
   constructor(props) {
@@ -117,6 +117,12 @@ class App extends React.Component {
         <div>counter: {counter}</div>
         <div>result: {JSON.stringify(sortedList)}</div>
         <div>isSorted: {JSON.stringify(isSorted)}</div>
+
+        <h2>Why you should consider using Bogosort</h2>
+        <p>Because you can theoretically sort your list into a signle iteration!</p>
+
+        <h2>Why you should NOT consider using Bogosort</h2>
+        <p>The average expected number of swaps equals (n-a)n!</p>
       </div>
     );
   }
